@@ -115,7 +115,7 @@ const ModernPortfolio = () => {
       
       setSubmitStatus({ 
         type: 'success', 
-        message: 'Message envoyé avec succès ! Je vous répondrai bientôt.' 
+        message: 'Message sent successfully! I will reply to you soon.' 
       });
       setFormData({ name: "", email: "", message: "" });
       
@@ -123,7 +123,7 @@ const ModernPortfolio = () => {
       console.error('Erreur lors de l\'envoi:', error);
       setSubmitStatus({ 
         type: 'error', 
-        message: 'Erreur lors de l\'envoi. Veuillez réessayer ou me contacter directement.' 
+        message: 'Error sending. Please try again or contact me directly.' 
       });
     } finally {
       setIsSubmitting(false);
