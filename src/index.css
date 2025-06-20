@@ -4,14 +4,313 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.logo-dubois-matthieu {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(45deg, #6b21a8, #9333ea, #a855f7, #c084fc);
+  background-size: 300% 300%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  letter-spacing: -0.5px;
+  position: relative;
+  overflow: hidden;
+  animation: gradientShift 1.5s ease-in-out infinite,
+    pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.8), 0 0 40px rgba(147, 51, 234, 0.6),
+    0 0 60px rgba(147, 51, 234, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.logo-dubois-matthieu::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: flash 3s linear infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.8),
+      0 0 40px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(147, 51, 234, 1), 0 0 60px rgba(147, 51, 234, 0.8),
+      0 0 90px rgba(147, 51, 234, 0.6);
+  }
+}
+
+@keyframes flash {
+  0%,
+  90%,
+  100% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  5%,
+  15% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+.logo-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.logo-display {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Logo principal avec effets flash */
+.logo-flash {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(45deg, #6b21a8, #9333ea, #a855f7, #c084fc);
+  background-size: 300% 300%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 11px;
+  font-family: "Arial", sans-serif;
+  letter-spacing: -0.5px;
+  position: relative;
+  overflow: hidden;
+  animation: gradientShift 1.5s ease-in-out infinite,
+    pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.8), 0 0 40px rgba(147, 51, 234, 0.6),
+    0 0 60px rgba(147, 51, 234, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Animation du dégradé */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animation de pulsation */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.8),
+      0 0 40px rgba(147, 51, 234, 0.6), 0 0 60px rgba(147, 51, 234, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(147, 51, 234, 1), 0 0 60px rgba(147, 51, 234, 0.8),
+      0 0 90px rgba(147, 51, 234, 0.6);
+  }
+}
+
+/* Effet de flash périodique */
+.logo-flash::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: flash 3s linear infinite;
+}
+
+@keyframes flash {
+  0%,
+  90%,
+  100% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  5%,
+  15% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* Particules autour du logo */
+.logo-display::before,
+.logo-display::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #9333ea;
+  border-radius: 50%;
+  animation: orbit 4s linear infinite;
+}
+
+.logo-display::before {
+  animation-delay: 0s;
+}
+
+.logo-display::after {
+  animation-delay: 2s;
+  background: #a855f7;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    opacity: 1;
+  }
+}
+
+/* Effet de scan laser */
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #9333ea, transparent);
+  animation: scan 2s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+}
+
+.description {
+  color: #e5e7eb;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 30px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.features {
+  background: rgba(147, 51, 234, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 30px 0;
+  border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.features h3 {
+  color: #c084fc;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.features ul {
+  color: #e5e7eb;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.copy-btn {
+  background: linear-gradient(45deg, #6b21a8, #9333ea);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(147, 51, 234, 0.4);
+  margin: 20px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.copy-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.6);
+}
+
+.copy-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.copy-btn:hover::before {
+  left: 100%;
 }
