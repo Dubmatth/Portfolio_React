@@ -10,8 +10,6 @@ import {
   Code,
   Palette,
   Zap,
-  Globe,
-  Download,
   Phone,
   MapPin,
 } from "lucide-react";
