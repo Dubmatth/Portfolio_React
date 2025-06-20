@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import emailjs from "emailjs-com";
+import { emailjsConfig } from "../config/emailjs";
 import {
   Github,
   Linkedin,
@@ -26,6 +28,7 @@ const ModernPortfolio = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
@@ -85,12 +88,46 @@ const ModernPortfolio = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validation simple
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitStatus({ type: 'error', message: 'Veuillez remplir tous les champs.' });
+      return;
+    }
+
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", message: "" });
-    alert("Message sent successfully!");
+    setSubmitStatus(null);
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'Matthieu Dubois',
+      };
+
+      await emailjs.send(
+        emailjsConfig.serviceId, 
+        emailjsConfig.templateId, 
+        templateParams, 
+        emailjsConfig.publicKey
+      );
+      
+      setSubmitStatus({ 
+        type: 'success', 
+        message: 'Message envoyé avec succès ! Je vous répondrai bientôt.' 
+      });
+      setFormData({ name: "", email: "", message: "" });
+      
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      setSubmitStatus({ 
+        type: 'error', 
+        message: 'Erreur lors de l\'envoi. Veuillez réessayer ou me contacter directement.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const projects = [
@@ -393,7 +430,7 @@ const ModernPortfolio = () => {
                 <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center">
                   <img
                     src={
-                      require("./IMG_1972.jpeg") ||
+                      require("../assets/IMG_1972.jpeg") ||
                       "https://via.placeholder.com/300"
                     }
                     alt={"Matthieu Dubois"}
@@ -636,6 +673,15 @@ const ModernPortfolio = () => {
                   className="w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-400 resize-none"
                 />
               </div>
+              {submitStatus && (
+                <div className={`p-4 rounded-lg backdrop-blur-sm ${
+                  submitStatus.type === 'success' 
+                    ? 'bg-green-500/20 border border-green-500/30 text-green-300' 
+                    : 'bg-red-500/20 border border-red-500/30 text-red-300'
+                }`}>
+                  {submitStatus.message}
+                </div>
+              )}
               <button
                 onClick={handleFormSubmit}
                 disabled={isSubmitting}
