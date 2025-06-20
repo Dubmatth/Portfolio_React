@@ -88,10 +88,13 @@ const ModernPortfolio = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Validation simple
     if (!formData.name || !formData.email || !formData.message) {
-      setSubmitStatus({ type: 'error', message: 'Veuillez remplir tous les champs.' });
+      setSubmitStatus({
+        type: "error",
+        message: "Veuillez remplir tous les champs.",
+      });
       return;
     }
 
@@ -103,27 +106,26 @@ const ModernPortfolio = () => {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_name: 'Matthieu Dubois',
+        to_name: "Matthieu Dubois",
       };
 
       await emailjs.send(
-        emailjsConfig.serviceId, 
-        emailjsConfig.templateId, 
-        templateParams, 
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        templateParams,
         emailjsConfig.publicKey
       );
-      
-      setSubmitStatus({ 
-        type: 'success', 
-        message: 'Message sent successfully! I will reply to you soon.' 
+
+      setSubmitStatus({
+        type: "success",
+        message: "Message sent successfully! I will reply to you soon.",
       });
       setFormData({ name: "", email: "", message: "" });
-      
     } catch (error) {
-      console.error('Erreur lors de l\'envoi:', error);
-      setSubmitStatus({ 
-        type: 'error', 
-        message: 'Error sending. Please try again or contact me directly.' 
+      console.error("Erreur lors de l'envoi:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "Error sending. Please try again or contact me directly.",
       });
     } finally {
       setIsSubmitting(false);
@@ -401,11 +403,11 @@ const ModernPortfolio = () => {
               </p>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                When I'm not coding, you'll find me exploring the latest design
-                trends, contributing to open-source projects, or sharing
-                knowledge with the developer community. I believe in continuous
-                learning and staying ahead of the curve in this ever-evolving
-                field.
+                Outside of development, I'm passionate about experimenting with
+                emerging technologies, participating in collaborative projects,
+                and mentoring fellow developers. I maintain a mindset of
+                lifelong learning to stay at the forefront of this rapidly
+                changing industry.
               </p>
 
               <div className="flex flex-wrap gap-4 mt-8">
@@ -674,11 +676,13 @@ const ModernPortfolio = () => {
                 />
               </div>
               {submitStatus && (
-                <div className={`p-4 rounded-lg backdrop-blur-sm ${
-                  submitStatus.type === 'success' 
-                    ? 'bg-green-500/20 border border-green-500/30 text-green-300' 
-                    : 'bg-red-500/20 border border-red-500/30 text-red-300'
-                }`}>
+                <div
+                  className={`p-4 rounded-lg backdrop-blur-sm ${
+                    submitStatus.type === "success"
+                      ? "bg-green-500/20 border border-green-500/30 text-green-300"
+                      : "bg-red-500/20 border border-red-500/30 text-red-300"
+                  }`}
+                >
                   {submitStatus.message}
                 </div>
               )}
