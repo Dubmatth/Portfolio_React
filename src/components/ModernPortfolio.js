@@ -377,7 +377,7 @@ const ModernPortfolio = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 transform -translate-x-1/2 animate-bounce">
           <ChevronDown size={32} className="text-white/60" />
         </div>
       </section>
