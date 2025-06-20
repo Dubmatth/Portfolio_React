@@ -363,7 +363,7 @@ const ModernPortfolio = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/matthdub"
+              href="https://www.linkedin.com/in/matthdubois/"
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
             >
               <Linkedin size={24} />
@@ -415,16 +415,6 @@ const ModernPortfolio = () => {
                   <MapPin size={16} />
                   <span>Martelange, Belgium</span>
                 </div>
-                {/* <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm">
-                  <Phone size={16} />
-                  <span>Available for freelance</span>
-                </div> */}
-              </div>
-
-              {/* <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300">
-                <Download size={16} />
-                Download Resume
-              </button> */}
             </div>
 
             <div className="relative">
@@ -627,7 +617,7 @@ const ModernPortfolio = () => {
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/matthdubois"
+                  href="https://www.linkedin.com/in/matthdubois/"
                   className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
                 >
                   <Linkedin size={20} />
