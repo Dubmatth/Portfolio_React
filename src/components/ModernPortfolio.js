@@ -336,8 +336,8 @@ const ModernPortfolio = () => {
           </p>
 
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-            Crafting digital experiences with modern technologies and innovative
-            design solutions
+            Passionate about crafting digital experiences with modern technologies and innovative
+            design solutions. Currently focused on personal projects and continuous learning.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -577,7 +577,7 @@ const ModernPortfolio = () => {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Let's Work Together
+              Let's connect and share ideas
             </h2>
             <p className="text-gray-400 text-lg">
               Ready to bring your ideas to life
@@ -589,8 +589,8 @@ const ModernPortfolio = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-4">Get in touch</h3>
                 <p className="text-gray-400 mb-6">
-                  I'm always open to discussing new opportunities, creative
-                  projects, or just having a chat about technology and design.
+                  I'm always open to discussing creative
+                  projects, sharing knowledge, or just having a chat about technology and design.
                 </p>
               </div>
 
