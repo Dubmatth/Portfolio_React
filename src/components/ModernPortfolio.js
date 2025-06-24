@@ -433,6 +433,7 @@ const ModernPortfolio = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Projects Section */}
