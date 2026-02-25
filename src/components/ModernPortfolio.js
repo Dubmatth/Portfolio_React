@@ -322,7 +322,7 @@ const ModernPortfolio = () => {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 p-1 animate-pulse">
               <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                <span className="text-4xl font-bold">JS</span>
+                <span className="text-4xl font-bold">MD</span>
               </div>
             </div>
           </div>
