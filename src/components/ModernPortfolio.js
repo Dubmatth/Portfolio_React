@@ -113,7 +113,7 @@ const ModernPortfolio = () => {
         emailjsConfig.serviceId,
         emailjsConfig.templateId,
         templateParams,
-        emailjsConfig.publicKey
+        emailjsConfig.publicKey,
       );
 
       setSubmitStatus({
@@ -270,7 +270,7 @@ const ModernPortfolio = () => {
                       >
                         {item.charAt(0).toUpperCase() + item.slice(1)}
                       </button>
-                    )
+                    ),
                   )}
                 </div>
               </div>
@@ -302,7 +302,7 @@ const ModernPortfolio = () => {
                   >
                     {item.charAt(0).toUpperCase() + item.slice(1)}
                   </button>
-                )
+                ),
               )}
             </div>
           </div>
@@ -322,7 +322,7 @@ const ModernPortfolio = () => {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 p-1 animate-pulse">
               <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                <span className="text-4xl font-bold">JS</span>
+                <span className="text-4xl font-bold">MD</span>
               </div>
             </div>
           </div>
@@ -332,12 +332,13 @@ const ModernPortfolio = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            Full-Stack Developer - Problem Solver - Tech Enthusiast
+            Full-Stack Developer · I build things that work · Based in Belgium
           </p>
 
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-            Passionate about crafting digital experiences with modern technologies and innovative
-            design solutions. Currently focused on personal projects and continuous learning.
+            I like building things end-to-end — from the database to the UI.
+            Right now I'm working on personal projects and sharpening my skills
+            in TypeScript and mobile dev.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -389,25 +390,30 @@ const ModernPortfolio = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               About Me
             </h2>
-            <p className="text-gray-400 text-lg">Get to know me better</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a passionate full-stack developer with 6+ years of
+                I'm a passionate full-stack developer with 7+ years of
                 experience creating digital solutions that combine functionality
-                with beautiful design. My journey in tech started with a
-                curiosity about how things work and evolved into a love for
-                building products that make a difference.
+                with beautiful design. At 10, I built my first website following
+                an online guide. Life took me elsewhere — video games, other
+                passions — but code never really left. At 29, I went back to
+                school, earned my Web Developer degree with high distinction,
+                and turned my internship into a full-time role as a junior
+                consultant. What still fascinates me today is the same thing
+                that hooked me as a kid: the idea that you can talk to a machine
+                through text.
               </p>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                Outside of development, I'm passionate about experimenting with
-                emerging technologies, participating in collaborative projects,
-                and mentoring fellow developers. I maintain a mindset of
-                lifelong learning to stay at the forefront of this rapidly
-                changing industry.
+                Life outside work mostly means family — I'm a dad of three young
+                kids, so time is precious. But I've never managed to stay away
+                from tech for long. A few days in, I'm back reading articles on
+                Medium, checking what's new on GitHub, or catching up on the
+                latest releases and drama on social media. It's not a routine I
+                force — it's just who I am.
               </p>
 
               <div className="flex flex-wrap gap-4 mt-8">
@@ -415,24 +421,21 @@ const ModernPortfolio = () => {
                   <MapPin size={16} />
                   <span>Martelange, Belgium</span>
                 </div>
+              </div>
             </div>
 
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-blue-500/20 backdrop-blur-sm border border-white/10 p-8">
-                <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center">
+            <div className="relative flex items-center justify-center">
+              <div className="w-85 h-85 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 p-1">
+                <div className="w-full h-full rounded-full overflow-hidden">
                   <img
-                    src={
-                      require("../assets/IMG_1972.jpeg") ||
-                      "https://via.placeholder.com/300"
-                    }
-                    alt={"Matthieu Dubois"}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src={require("../assets/IMG_1974.png")}
+                    alt="Matthieu Dubois"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -443,7 +446,6 @@ const ModernPortfolio = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Featured Projects
             </h2>
-            <p className="text-gray-400 text-lg">Some of my recent work</p>
           </div>
 
           {/* Filter Buttons */}
@@ -461,7 +463,7 @@ const ModernPortfolio = () => {
                 >
                   {filter.charAt(0).toUpperCase() + filter.slice(1)}
                 </button>
-              )
+              ),
             )}
           </div>
 
@@ -581,20 +583,13 @@ const ModernPortfolio = () => {
               Let's connect and share ideas
             </h2>
             <p className="text-gray-400 text-lg">
-              Ready to bring your ideas to life
+              Whether it's a project idea, a question, or just saying hi — feel
+              free to reach out.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Get in touch</h3>
-                <p className="text-gray-400 mb-6">
-                  I'm always open to discussing creative
-                  projects, sharing knowledge, or just having a chat about technology and design.
-                </p>
-              </div>
-
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm">
                   <Mail className="text-purple-400" size={20} />
@@ -693,7 +688,7 @@ const ModernPortfolio = () => {
       <footer className="py-8 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-gray-400">
-            © 2025 Matthieu Dubois. Built with ❤️, React & Tailwind CSS.
+            © 2026 Matthieu Dubois. Built with ❤️, React & Tailwind CSS.
           </p>
         </div>
       </footer>
