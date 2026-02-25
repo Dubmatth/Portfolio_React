@@ -23,7 +23,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "echo www.matthieudubois.dev > ./build/CNAME && gh-pages -d build"
-    
   },
   "eslintConfig": {
     "extends": [
