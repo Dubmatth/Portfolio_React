@@ -422,19 +422,16 @@ const ModernPortfolio = () => {
                   <span>Martelange, Belgium</span>
                 </div>
               </div>
+            </div>
 
-              <div className="relative">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-blue-500/20 backdrop-blur-sm border border-white/10 p-8">
-                  <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center">
-                    <img
-                      src={
-                        require("../assets/IMG_1972.jpeg") ||
-                        "https://via.placeholder.com/300"
-                      }
-                      alt={"Matthieu Dubois"}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
+            <div className="relative flex items-center justify-center">
+              <div className="w-85 h-85 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 p-1">
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img
+                    src={require("../assets/IMG_1974.png")}
+                    alt="Matthieu Dubois"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
