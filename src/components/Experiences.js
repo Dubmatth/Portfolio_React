@@ -6,7 +6,7 @@ const Experiences = ({ experiencesRef, isLoaded }) => {
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Expériences & Réalisations
+            Experiences & Achievements
           </h2>
         </div>
 
@@ -28,6 +28,9 @@ const Experiences = ({ experiencesRef, isLoaded }) => {
                     {exp.role}
                   </p>
                 </div>
+                <span className="text-sm text-gray-400 mt-2 md:mt-0 md:ml-4 shrink-0">
+                  {exp.period}
+                </span>
               </div>
 
               <p className="text-gray-300 mb-6 text-lg leading-relaxed">
@@ -36,7 +39,7 @@ const Experiences = ({ experiencesRef, isLoaded }) => {
 
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Principaux accomplissements
+                  Key achievements
                 </h4>
                 <ul className="space-y-2">
                   {exp.achievements.map((achievement, i) => (

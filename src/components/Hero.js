@@ -70,7 +70,7 @@ const Hero = ({ heroRef, isLoaded, scrollToSection }) => {
           </a>
           <a
             href={`mailto:${personalInfo.email}`}
-            aria-label="Envoyer un email"
+            aria-label="Send an email"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
           >
             <Mail size={24} />

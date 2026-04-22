@@ -54,7 +54,7 @@ const Navigation = ({ activeSection, scrollToSection, isLoaded }) => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-expanded={isMenuOpen}
                 aria-controls="mobile-menu"
-                aria-label="Menu de navigation"
+                aria-label="Navigation menu"
                 className="p-2 rounded-lg hover:bg-white/10 transition-colors"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

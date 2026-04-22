@@ -25,7 +25,7 @@ test('renders contact form fields', () => {
 test('shows error when submitting empty form', async () => {
   render(<App />);
   await userEvent.click(screen.getByText('Send Message'));
-  expect(screen.getByText('Veuillez remplir tous les champs.')).toBeInTheDocument();
+  expect(screen.getByText('Please fill in all fields.')).toBeInTheDocument();
 });
 
 test('shows error for invalid email format', async () => {
@@ -35,6 +35,6 @@ test('shows error for invalid email format', async () => {
   await userEvent.type(screen.getByPlaceholderText('Your Message'), 'Hello world');
   await userEvent.click(screen.getByText('Send Message'));
   expect(
-    screen.getByText('Veuillez entrer une adresse email valide.')
+    screen.getByText('Please enter a valid email address.')
   ).toBeInTheDocument();
 });

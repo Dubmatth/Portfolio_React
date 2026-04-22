@@ -26,12 +26,12 @@ const Contact = ({ contactRef }) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
-      setSubmitStatus({ type: "error", message: "Veuillez remplir tous les champs." });
+      setSubmitStatus({ type: "error", message: "Please fill in all fields." });
       return;
     }
 
     if (!EMAIL_REGEX.test(formData.email)) {
-      setSubmitStatus({ type: "error", message: "Veuillez entrer une adresse email valide." });
+      setSubmitStatus({ type: "error", message: "Please enter a valid email address." });
       return;
     }
 
@@ -130,7 +130,7 @@ const Contact = ({ contactRef }) => {
               </a>
               <a
                 href={`mailto:${personalInfo.email}`}
-                aria-label="Envoyer un email"
+                aria-label="Send an email"
                 className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
               >
                 <Mail size={20} />

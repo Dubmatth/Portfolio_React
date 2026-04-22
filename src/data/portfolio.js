@@ -14,42 +14,45 @@ export const navItems = ["home", "about", "experiences", "skills", "contact"];
 export const experiences = [
   {
     id: 1,
-    title: "Application Logistique (SaaS B2B)",
-    role: "Lead Full-Stack Developer",
+    title: "Industrial Glass Ordering Platform",
+    role: "Full-Stack Developer",
+    period: "2020 – 2021",
     context:
-      "Refonte complète d'un système vieillissant pour un acteur majeur de la logistique, visant à améliorer les performances et le suivi en temps réel des expéditions.",
+      "Built a web ordering platform for industrial glass wholesalers, supporting delivery logistics by train and truck for a major industrial glass manufacturer.",
     achievements: [
-      "Architecture de l'application front-end complète.",
-      "Optimisation des requêtes complexes en base de données (+40% de perfs au chargement des données).",
-      "Mise en place d'un système de notification en temps réel.",
+      "Designed a load optimization system to maximize truck and train capacity based on glass type and dimensions.",
+      "Delivered a multi-tenant ordering platform handling the full order lifecycle from quote to delivery.",
+      "Integrated the application with SharePoint for document management and internal workflows via SPFx.",
     ],
-    technologies: ["React", "Node.js", "PostgreSQL", "WebSockets"],
+    technologies: ["React", "SPFx", "SharePoint", "C#"],
   },
   {
     id: 2,
-    title: "Dashboard d'Analyse Financière",
-    role: "Développeur Front-End",
+    title: "Due Diligence Tracking Application",
+    role: "Full-Stack Developer",
+    period: "2019 – 2020",
     context:
-      "Création d'un outil interne permettant aux analystes de visualiser des milliers de lignes de données via des graphiques interactifs.",
+      "Developed a due diligence tracking application for an English-speaking financial client based in Kirchberg, Luxembourg, designed to run across three distinct deployment modes.",
     achievements: [
-      "Développement de graphes optimisés capables d'afficher de gros volumes de données sans latence.",
-      "Création d'un design system interne cohérent et accessible.",
-      "Implémentation de filtres complexes et d'exports PDF.",
+      "Architected a single codebase supporting three deployment targets: SaaS, On-Premise, and Desktop via Electron.",
+      "Delivered the full project on schedule under tight deadlines for a demanding client in the financial sector.",
+      "Built the cross-platform desktop version using Electron, reusing the existing React/Node.js core.",
     ],
-    technologies: ["React", "TypeScript", "D3.js", "Tailwind CSS"],
+    technologies: ["React", "Node.js", "Electron"],
   },
   {
     id: 3,
-    title: "Application Mobile de Productivité",
-    role: "Mobile Developer",
+    title: "Meal Order Management System",
+    role: "Full-Stack Developer",
+    period: "2019 – 2020",
     context:
-      "Développement d'une application interne de gestion du temps et des tâches pour les équipes.",
+      "Built an internal meal ordering and management application for an architecture firm, integrated with their existing SharePoint environment.",
     achievements: [
-      "Mise en place de la base de code React Native et de l'intégration continue.",
-      "Gestion du mode hors-ligne avec synchronisation locale sécurisée.",
-      "Déploiement sur l'App Store et Google Play.",
+      "Delivered a complete solution within tight deadlines for a high-demand client.",
+      "Integrated the app with SharePoint via SPFx for seamless access within the client's intranet.",
+      "Developed the C# backend to handle order processing, validation, and reporting.",
     ],
-    technologies: ["React Native", "Expo", "SQLite", "Zustand"],
+    technologies: ["React", "SPFx", "C#", "SharePoint"],
   },
 ];
 
