@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import emailjs from "emailjs-com";
 import { emailjsConfig } from "../config/emailjs";
@@ -6,11 +6,18 @@ import { personalInfo } from "../data/portfolio";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const SUBMIT_TIMEOUT_MS = 10000;
+const SUCCESS_CLEAR_DELAY_MS = 5000;
 
 const Contact = ({ contactRef }) => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+
+  useEffect(() => {
+    if (submitStatus?.type !== "success") return;
+    const timer = setTimeout(() => setSubmitStatus(null), SUCCESS_CLEAR_DELAY_MS);
+    return () => clearTimeout(timer);
+  }, [submitStatus]);
 
   const updateField = (field) => (e) =>
     setFormData((prev) => ({ ...prev, [field]: e.target.value }));
@@ -105,18 +112,25 @@ const Contact = ({ contactRef }) => {
             <div className="flex gap-4">
               <a
                 href={personalInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
                 className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
               >
                 <Github size={20} />
               </a>
               <a
                 href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
               >
                 <Linkedin size={20} />
               </a>
               <a
                 href={`mailto:${personalInfo.email}`}
+                aria-label="Envoyer un email"
                 className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
               >
                 <Mail size={20} />
@@ -146,17 +160,19 @@ const Contact = ({ contactRef }) => {
               onChange={updateField("message")}
               className={`${inputClass} resize-none`}
             />
-            {submitStatus && (
-              <div
-                className={`p-4 rounded-lg backdrop-blur-sm ${
-                  submitStatus.type === "success"
-                    ? "bg-green-500/20 border border-green-500/30 text-green-300"
-                    : "bg-red-500/20 border border-red-500/30 text-red-300"
-                }`}
-              >
-                {submitStatus.message}
-              </div>
-            )}
+            <div aria-live="polite" aria-atomic="true">
+              {submitStatus && (
+                <div
+                  className={`p-4 rounded-lg backdrop-blur-sm ${
+                    submitStatus.type === "success"
+                      ? "bg-green-500/20 border border-green-500/30 text-green-300"
+                      : "bg-red-500/20 border border-red-500/30 text-red-300"
+                  }`}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+            </div>
             <button
               type="submit"
               disabled={isSubmitting}

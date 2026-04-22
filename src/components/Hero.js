@@ -52,18 +52,25 @@ const Hero = ({ heroRef, isLoaded, scrollToSection }) => {
         <div className="flex justify-center space-x-6">
           <a
             href={personalInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
           >
             <Github size={24} />
           </a>
           <a
             href={personalInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
           >
             <Linkedin size={24} />
           </a>
           <a
             href={`mailto:${personalInfo.email}`}
+            aria-label="Envoyer un email"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
           >
             <Mail size={24} />

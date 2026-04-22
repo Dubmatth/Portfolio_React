@@ -36,6 +36,7 @@ const Navigation = ({ activeSection, scrollToSection, isLoaded }) => {
                   <button
                     key={item}
                     onClick={() => handleNavClick(item)}
+                    aria-current={activeSection === item ? "page" : undefined}
                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/10 ${
                       activeSection === item
                         ? "bg-white/20 text-white"
@@ -51,6 +52,9 @@ const Navigation = ({ activeSection, scrollToSection, isLoaded }) => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-menu"
+                aria-label="Menu de navigation"
                 className="p-2 rounded-lg hover:bg-white/10 transition-colors"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -60,6 +64,7 @@ const Navigation = ({ activeSection, scrollToSection, isLoaded }) => {
         </div>
 
         <div
+          id="mobile-menu"
           className={`md:hidden transition-all duration-300 ${
             isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
           } overflow-hidden`}
@@ -69,6 +74,7 @@ const Navigation = ({ activeSection, scrollToSection, isLoaded }) => {
               <button
                 key={item}
                 onClick={() => handleNavClick(item)}
+                aria-current={activeSection === item ? "page" : undefined}
                 className="block w-full text-left px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
