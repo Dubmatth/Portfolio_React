@@ -14,6 +14,20 @@ export const navItems = ["home", "about", "experiences", "skills", "contact"];
 export const experiences = [
   {
     id: 1,
+    title: "Construction Insurance Subscription Suite",
+    role: "Full-Stack Developer",
+    period: "2020 – 2022",
+    context:
+      "Developed multiple subscription forms for construction insurance products within a large insurance group, featuring extensive business and eligibility rules, document generation, and an API serving hundreds of users.",
+    achievements: [
+      "Built and maintained several insurance subscription forms handling complex, interrelated business and eligibility rule sets.",
+      "Designed and exposed a REST API consumed by hundreds of users across the platform.",
+      "Implemented a 3-level permission system and integrated SSRS for automated document generation and printing.",
+    ],
+    technologies: ["jQuery", "Datatables.net", "C#", "SSRS"],
+  },
+  {
+    id: 2,
     title: "Industrial Glass Ordering Platform",
     role: "Full-Stack Developer",
     period: "2020 – 2021",
@@ -27,7 +41,21 @@ export const experiences = [
     technologies: ["React", "SPFx", "SharePoint", "C#"],
   },
   {
-    id: 2,
+    id: 3,
+    title: "Insurance Product Subscription Platform",
+    role: "Full-Stack Developer",
+    period: "2019 – 2020",
+    context:
+      "Built a subscription form for an insurance product with complex business and eligibility rules, print capabilities, and a multi-level access rights system deployed to several hundred users.",
+    achievements: [
+      "Implemented a business and eligibility rules engine to validate subscription applications in real time.",
+      "Integrated SSRS reporting services for automated document generation and printing.",
+      "Designed a 3-level permission system managing access for several hundred users.",
+    ],
+    technologies: ["jQuery", "Datatables.net", "C#", "SSRS"],
+  },
+  {
+    id: 4,
     title: "Due Diligence Tracking Application",
     role: "Full-Stack Developer",
     period: "2019 – 2020",
@@ -41,7 +69,7 @@ export const experiences = [
     technologies: ["React", "Node.js", "Electron"],
   },
   {
-    id: 3,
+    id: 5,
     title: "Meal Order Management System",
     role: "Full-Stack Developer",
     period: "2019 – 2020",
