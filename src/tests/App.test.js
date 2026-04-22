@@ -1,8 +1,40 @@
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import userEvent from '@testing-library/user-event';
+import App from '../components/App';
 
-test('renders learn react link', () => {
+test('renders the portfolio with hero name', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText('Matthieu Dubois')).toBeInTheDocument();
+});
+
+test('renders all navigation items', () => {
+  render(<App />);
+  ['Home', 'About', 'Experiences', 'Skills', 'Contact'].forEach((item) => {
+    expect(screen.getAllByText(item).length).toBeGreaterThan(0);
+  });
+});
+
+test('renders contact form fields', () => {
+  render(<App />);
+  expect(screen.getByPlaceholderText('Your Name')).toBeInTheDocument();
+  expect(screen.getByPlaceholderText('Your Email')).toBeInTheDocument();
+  expect(screen.getByPlaceholderText('Your Message')).toBeInTheDocument();
+});
+
+test('shows error when submitting empty form', async () => {
+  render(<App />);
+  await userEvent.click(screen.getByText('Send Message'));
+  expect(screen.getByText('Veuillez remplir tous les champs.')).toBeInTheDocument();
+});
+
+test('shows error for invalid email format', async () => {
+  render(<App />);
+  await userEvent.type(screen.getByPlaceholderText('Your Name'), 'Test User');
+  await userEvent.type(screen.getByPlaceholderText('Your Email'), 'not-an-email');
+  await userEvent.type(screen.getByPlaceholderText('Your Message'), 'Hello world');
+  await userEvent.click(screen.getByText('Send Message'));
+  expect(
+    screen.getByText('Veuillez entrer une adresse email valide.')
+  ).toBeInTheDocument();
 });

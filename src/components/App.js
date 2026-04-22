@@ -1,12 +1,7 @@
-import '../styles/App.css';
 import ModernPortfolio from './ModernPortfolio';
 
 function App() {
-  return (
-    <div className="App">
-      <ModernPortfolio/>
-    </div>
-  );
+  return <ModernPortfolio />;
 }
 
 export default App;
