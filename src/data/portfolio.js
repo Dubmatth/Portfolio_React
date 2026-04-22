@@ -86,39 +86,51 @@ export const experiences = [
 
 export const skills = [
   {
-    name: "React/Next.js",
-    level: 85,
+    name: "React",
+    level: 83,
     icon: Code,
     color: "from-blue-500 to-cyan-500",
   },
   {
-    name: "TypeScript",
+    name: "SharePoint 2013–SE / Cloud",
     level: 82,
-    icon: Code,
-    color: "from-blue-600 to-purple-600",
+    icon: Zap,
+    color: "from-blue-600 to-blue-400",
   },
   {
-    name: "Node.js",
+    name: "C# / .NET 4.8",
+    level: 82,
+    icon: Zap,
+    color: "from-violet-600 to-purple-500",
+  },
+  {
+    name: "TypeScript",
+    level: 80,
+    icon: Code,
+    color: "from-blue-600 to-indigo-600",
+  },
+  {
+    name: "SPFx",
     level: 78,
     icon: Zap,
-    color: "from-green-500 to-emerald-500",
+    color: "from-blue-700 to-blue-500",
   },
   {
-    name: "C#",
-    level: 80,
-    icon: Zap,
-    color: "from-gray-600 to-gray-400",
-  },
-  {
-    name: "UI/UX Design",
-    level: 74,
-    icon: Palette,
-    color: "from-pink-500 to-rose-500",
-  },
-  {
-    name: "GraphQL",
-    level: 65,
+    name: "jQuery",
+    level: 75,
     icon: Code,
-    color: "from-purple-500 to-indigo-500",
+    color: "from-sky-500 to-blue-400",
+  },
+  {
+    name: "SSRS",
+    level: 70,
+    icon: Palette,
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    name: "SQL Server",
+    level: 73,
+    icon: Zap,
+    color: "from-red-600 to-orange-400",
   },
 ];
