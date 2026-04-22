@@ -21,7 +21,6 @@ const ModernPortfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedFilter, setSelectedFilter] = useState("all");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +31,7 @@ const ModernPortfolio = () => {
 
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
+  const experiencesRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
 
@@ -47,7 +46,7 @@ const ModernPortfolio = () => {
       const sections = [
         { id: "home", ref: heroRef },
         { id: "about", ref: aboutRef },
-        { id: "projects", ref: projectsRef },
+        { id: "experiences", ref: experiencesRef },
         { id: "skills", ref: skillsRef },
         { id: "contact", ref: contactRef },
       ];
@@ -78,7 +77,7 @@ const ModernPortfolio = () => {
     const refs = {
       home: heroRef,
       about: aboutRef,
-      projects: projectsRef,
+      experiences: experiencesRef,
       skills: skillsRef,
       contact: contactRef,
     };
@@ -132,40 +131,42 @@ const ModernPortfolio = () => {
     }
   };
 
-  const projects = [
+  const experiences = [
     {
       id: 1,
-      title: "Caps Shop",
-      description:
-        "Full-stack e-commerce solution with React, Node.js, and Stripe integration",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      category: "fullstack",
-      technologies: ["React", "Node.js", "Prisma", "GraphQL", "Stripe"],
-      github: "#",
-      demo: "#",
+      title: "Application Logistique (SaaS B2B)",
+      role: "Lead Full-Stack Developer",
+      context: "Refonte complète d'un système vieillissant pour un acteur majeur de la logistique, visant à améliorer les performances et le suivi en temps réel des expéditions.",
+      achievements: [
+        "Architecture de l'application front-end complète.",
+        "Optimisation des requêtes complexes en base de données (+40% de perfs au chargement des données).",
+        "Mise en place d'un système de notification en temps réel."
+      ],
+      technologies: ["React", "Node.js", "PostgreSQL", "WebSockets"],
     },
     {
       id: 2,
-      title: "Site web",
-      description: "Landing page for an organisation",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      category: "frontend",
-      technologies: ["Javascript", "jQuery"],
-      github: "#",
-      demo: "#",
+      title: "Dashboard d'Analyse Financière",
+      role: "Développeur Front-End",
+      context: "Création d'un outil interne permettant aux analystes de visualiser des milliers de lignes de données via des graphiques interactifs.",
+      achievements: [
+        "Développement de graphes optimisés capables d'afficher de gros volumes de données sans latence.",
+        "Création d'un design system interne cohérent et accessible.",
+        "Implémentation de filtres complexes et d'exports PDF."
+      ],
+      technologies: ["React", "TypeScript", "D3.js", "Tailwind CSS"],
     },
     {
       id: 3,
-      title: "Mobile App",
-      description: "Modern application to manage tasks with pomodoro timer",
-      image:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
-      category: "mobile",
-      technologies: ["React Native", "PostgreSQL", "Expo"],
-      github: "#",
-      demo: "#",
+      title: "Application Mobile de Productivité",
+      role: "Mobile Developer",
+      context: "Développement d'une application interne de gestion du temps et des tâches pour les équipes.",
+      achievements: [
+        "Mise en place de la base de code React Native et de l'intégration continue.",
+        "Gestion du mode hors-ligne avec synchronisation locale sécurisée.",
+        "Déploiement sur l'App Store et Google Play."
+      ],
+      technologies: ["React Native", "Expo", "SQLite", "Zustand"],
     },
   ];
 
@@ -207,11 +208,6 @@ const ModernPortfolio = () => {
       color: "from-purple-500 to-indigo-500",
     },
   ];
-
-  const filteredProjects =
-    selectedFilter === "all"
-      ? projects
-      : projects.filter((project) => project.category === selectedFilter);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
@@ -257,7 +253,7 @@ const ModernPortfolio = () => {
 
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  {["home", "about", "projects", "skills", "contact"].map(
+                  {["home", "about", "experiences", "skills", "contact"].map(
                     (item) => (
                       <button
                         key={item}
@@ -293,7 +289,7 @@ const ModernPortfolio = () => {
             } overflow-hidden`}
           >
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/40 backdrop-blur-xl">
-              {["home", "about", "projects", "skills", "contact"].map(
+              {["home", "about", "experiences", "skills", "contact"].map(
                 (item) => (
                   <button
                     key={item}
@@ -343,7 +339,7 @@ const ModernPortfolio = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
-              onClick={() => scrollToSection("projects")}
+              onClick={() => scrollToSection("experiences")}
               className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               View My Work
@@ -439,85 +435,62 @@ const ModernPortfolio = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section ref={projectsRef} className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Experiences Section */}
+      <section ref={experiencesRef} className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Featured Projects
+              Expériences & Réalisations
             </h2>
           </div>
 
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {["all", "frontend", "fullstack", "mobile", "backend"].map(
-              (filter) => (
-                <button
-                  key={filter}
-                  onClick={() => setSelectedFilter(filter)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                    selectedFilter === filter
-                      ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-                      : "bg-white/10 text-gray-300 hover:bg-white/20"
-                  }`}
-                >
-                  {filter.charAt(0).toUpperCase() + filter.slice(1)}
-                </button>
-              ),
-            )}
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {filteredProjects.map((project, index) => (
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
               <div
-                key={project.id}
-                className={`group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105 ${
+                key={exp.id}
+                className={`group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:-translate-y-1 ${
                   isLoaded
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={project.github}
-                      className="p-2 bg-black/50 backdrop-blur-sm rounded-full hover:bg-black/70 transition-colors"
-                    >
-                      <Github size={16} />
-                    </a>
-                    <a
-                      href={project.demo}
-                      className="p-2 bg-black/50 backdrop-blur-sm rounded-full hover:bg-black/70 transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                    </a>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                      {exp.title}
+                    </h3>
+                    <p className="text-purple-400 font-medium text-lg mt-1">{exp.role}</p>
                   </div>
                 </div>
+                
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                  {exp.context}
+                </p>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-purple-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-xs bg-white/10 rounded-full text-gray-300"
-                      >
-                        {tech}
-                      </span>
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                    Principaux accomplissements
+                  </h4>
+                  <ul className="space-y-2">
+                    {exp.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-start">
+                        <span className="text-purple-500 mr-2 mt-1">▹</span>
+                        <span className="text-gray-300">{achievement}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                  {exp.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 text-sm bg-purple-500/10 text-purple-200 rounded-full border border-purple-500/20"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
