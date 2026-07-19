@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { emailjsConfig } from "../config/emailjs";
 import { personalInfo } from "../data/portfolio";
 
