@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { emailjsConfig } from "../config/emailjs";
 import { personalInfo } from "../data/portfolio";
@@ -98,10 +98,6 @@ const Contact = ({ contactRef }) => {
               <div className="flex items-center gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm">
                 <Mail className="text-purple-400" size={20} />
                 <span>{personalInfo.email}</span>
-              </div>
-              <div className="flex items-center gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm">
-                <Phone className="text-purple-400" size={20} />
-                <span>{personalInfo.phone}</span>
               </div>
               <div className="flex items-center gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm">
                 <MapPin className="text-purple-400" size={20} />

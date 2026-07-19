@@ -3,7 +3,6 @@ import { Code, Palette, Zap } from "lucide-react";
 export const personalInfo = {
   name: "Matthieu Dubois",
   email: "dubois.matthieu@live.be",
-  phone: "+32 493 147 946",
   location: "Martelange, Belgium",
   github: "https://github.com/dubmatth",
   linkedin: "https://www.linkedin.com/in/matthdubois/",
