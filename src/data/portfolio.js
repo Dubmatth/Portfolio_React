@@ -83,53 +83,28 @@ export const experiences = [
   },
 ];
 
-export const skills = [
+export const skillCategories = [
   {
-    name: "React",
-    level: 83,
-    icon: Code,
-    color: "from-blue-500 to-cyan-500",
+    category: "Frontend",
+    skills: [
+      { name: "React", icon: Code, color: "from-blue-500 to-cyan-500" },
+      { name: "TypeScript", icon: Code, color: "from-blue-600 to-indigo-600" },
+      { name: "jQuery", icon: Code, color: "from-sky-500 to-blue-400" },
+    ],
   },
   {
-    name: "SharePoint 2013–SE / Cloud",
-    level: 82,
-    icon: Zap,
-    color: "from-blue-600 to-blue-400",
+    category: "Backend & Data",
+    skills: [
+      { name: "C# / .NET 4.8", icon: Zap, color: "from-violet-600 to-purple-500" },
+      { name: "SQL Server", icon: Zap, color: "from-red-600 to-orange-400" },
+    ],
   },
   {
-    name: "C# / .NET 4.8",
-    level: 82,
-    icon: Zap,
-    color: "from-violet-600 to-purple-500",
-  },
-  {
-    name: "TypeScript",
-    level: 80,
-    icon: Code,
-    color: "from-blue-600 to-indigo-600",
-  },
-  {
-    name: "SPFx",
-    level: 78,
-    icon: Zap,
-    color: "from-blue-700 to-blue-500",
-  },
-  {
-    name: "jQuery",
-    level: 75,
-    icon: Code,
-    color: "from-sky-500 to-blue-400",
-  },
-  {
-    name: "SSRS",
-    level: 70,
-    icon: Palette,
-    color: "from-orange-500 to-red-500",
-  },
-  {
-    name: "SQL Server",
-    level: 73,
-    icon: Zap,
-    color: "from-red-600 to-orange-400",
+    category: "Enterprise & Tools",
+    skills: [
+      { name: "SharePoint 2013–SE / Cloud", icon: Zap, color: "from-blue-600 to-blue-400" },
+      { name: "SPFx", icon: Zap, color: "from-blue-700 to-blue-500" },
+      { name: "SSRS", icon: Palette, color: "from-orange-500 to-red-500" },
+    ],
   },
 ];

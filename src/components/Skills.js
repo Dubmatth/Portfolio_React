@@ -1,4 +1,4 @@
-import { skills } from "../data/portfolio";
+import { skillCategories } from "../data/portfolio";
 
 const Skills = ({ skillsRef, isLoaded }) => {
   return (
@@ -11,40 +11,35 @@ const Skills = ({ skillsRef, isLoaded }) => {
           <p className="text-gray-400 text-lg">Technologies I work with</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skill, index) => {
-            const Icon = skill.icon;
-            return (
-              <div
-                key={skill.name}
-                className={`p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-500 ${
-                  isLoaded
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${skill.color}`}>
-                    <Icon size={24} className="text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold">{skill.name}</h3>
-                </div>
-
-                <div className="relative">
-                  <div className="w-full bg-white/10 rounded-full h-2">
+        <div className="space-y-12">
+          {skillCategories.map((group, groupIndex) => (
+            <div key={group.category}>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6">
+                {group.category}
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {group.skills.map((skill, index) => {
+                  const Icon = skill.icon;
+                  return (
                     <div
-                      className={`h-2 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
-                      style={{ width: isLoaded ? `${skill.level}%` : "0%" }}
-                    />
-                  </div>
-                  <span className="text-sm text-gray-400 mt-2 block">
-                    {skill.level}%
-                  </span>
-                </div>
+                      key={skill.name}
+                      className={`flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-500 ${
+                        isLoaded
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-10"
+                      }`}
+                      style={{ transitionDelay: `${(groupIndex * 3 + index) * 100}ms` }}
+                    >
+                      <div className={`p-2 rounded-lg bg-gradient-to-r ${skill.color} shrink-0`}>
+                        <Icon size={20} className="text-white" />
+                      </div>
+                      <span className="font-medium">{skill.name}</span>
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
