@@ -15,7 +15,8 @@ export const experiences = [
     id: 1,
     title: "Construction Insurance Subscription Suite",
     role: "Full-Stack Developer",
-    period: "2020 – 2022",
+    company: "CAMCA",
+    period: "2021 – Present",
     context:
       "Developed multiple subscription forms for construction insurance products within a large insurance group, featuring extensive business and eligibility rules, document generation, and an API serving hundreds of users.",
     achievements: [

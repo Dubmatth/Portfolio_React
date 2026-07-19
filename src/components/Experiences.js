@@ -26,6 +26,7 @@ const Experiences = ({ experiencesRef, isLoaded }) => {
                   </h3>
                   <p className="text-purple-400 font-medium text-lg mt-1">
                     {exp.role}
+                    {exp.company && ` · ${exp.company}`}
                   </p>
                 </div>
                 <span className="text-sm text-gray-400 mt-2 md:mt-0 md:ml-4 shrink-0">
