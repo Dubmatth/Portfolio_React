@@ -30,6 +30,7 @@ export const experiences = [
     id: 2,
     title: "Industrial Glass Ordering Platform",
     role: "Full-Stack Developer",
+    company: "Intermade",
     period: "2020 – 2021",
     context:
       "Built a web ordering platform for industrial glass wholesalers, supporting delivery logistics by train and truck for a major industrial glass manufacturer.",
@@ -44,6 +45,7 @@ export const experiences = [
     id: 3,
     title: "Insurance Product Subscription Platform",
     role: "Full-Stack Developer",
+    company: "Intermade",
     period: "2019 – 2020",
     context:
       "Built a subscription form for an insurance product with complex business and eligibility rules, print capabilities, and a multi-level access rights system deployed to several hundred users.",
@@ -58,6 +60,7 @@ export const experiences = [
     id: 4,
     title: "Due Diligence Tracking Application",
     role: "Full-Stack Developer",
+    company: "Intermade",
     period: "2019 – 2020",
     context:
       "Developed a due diligence tracking application for an English-speaking financial client based in Kirchberg, Luxembourg, designed to run across three distinct deployment modes.",
@@ -72,6 +75,7 @@ export const experiences = [
     id: 5,
     title: "Meal Order Management System",
     role: "Full-Stack Developer",
+    company: "Intermade",
     period: "2019 – 2020",
     context:
       "Built an internal meal ordering and management application for an architecture firm, integrated with their existing SharePoint environment.",
