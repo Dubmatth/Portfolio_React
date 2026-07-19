@@ -4,12 +4,12 @@ Welcome to my digital playground! This is where I showcase my passion for creati
 
 ## 🚀 About This Portfolio
 
-This isn't just another portfolio website - it's a reflection of my journey as a developer from Martelange, Belgium. After 6+ years in the tech world, I've learned that the best projects come from combining solid technical skills with genuine creativity and attention to detail.
+This isn't just another portfolio website - it's a reflection of my journey as a developer from Martelange, Belgium. After 7+ years in the tech world, I've learned that the best projects come from combining solid technical skills with genuine creativity and attention to detail.
 
 ### What Makes This Special?
 
 - **Built with Love**: Every animation, every gradient, every interaction has been carefully crafted
-- **Modern Tech Stack**: React 19, Tailwind CSS, Framer Motion - I love working with cutting-edge tools
+- **Modern Tech Stack**: React 19, Tailwind CSS - I love working with cutting-edge tools
 - **Personal Touch**: From the animated logo to the contact form, everything reflects my personality
 - **Real Projects**: The portfolio showcases actual work I'm proud of, not just demo projects
 
@@ -21,7 +21,6 @@ I'm a firm believer in using the right tools for the job. Here's what powers thi
 
 - **React 19** - Because I love working with the latest and greatest
 - **Tailwind CSS** - My go-to for rapid, maintainable styling
-- **Framer Motion** - For those smooth animations that make users smile
 - **EmailJS** - So you can actually reach me through the contact form!
 
 ### Why These Choices?
@@ -76,28 +75,17 @@ If you want to set up something similar:
 - **Interactive mouse-following background** - try moving your cursor around!
 - **Responsive design** that works beautifully on any device
 - **Loading animations** that make waiting feel intentional
-- **Project filtering** that's both functional and fun
 
 ### The Big Picture
 
 This portfolio represents my evolution as a developer. From someone who started with curiosity about "how things work" to someone who can build complete digital experiences that users love.
-
-## 🌟 Featured Projects
-
-The projects showcased here represent different aspects of my skills:
-
-- **Full-stack e-commerce** - Because I love building complete solutions
-- **Landing pages** - Sometimes simple is perfect
-- **Mobile apps** - The future is mobile-first
-
-Each project taught me something new and pushed me to grow.
 
 ## 🤝 Let's Connect!
 
 I'm always excited to meet fellow developers, potential collaborators, or anyone with interesting projects. Here's where you can find me:
 
 - **GitHub**: [@dubmatth](https://github.com/dubmatth) - Where I share my code
-- **LinkedIn**: [matthdub](https://www.linkedin.com/in/matthdub) - Professional networking
+- **LinkedIn**: [matthdubois](https://www.linkedin.com/in/matthdubois/) - Professional networking
 - **Email**: dubois.matthieu@live.be - For everything else
 
 ## 🚀 Deployment & Hosting
@@ -137,7 +125,7 @@ I believe in:
 ## 🎉 Fun Facts
 
 - I'm based in beautiful Martelange, Belgium 🇧🇪
-- I've been coding for 6+ years and still get excited about new technologies
+- I've been coding for 7+ years and still get excited about new technologies
 - I believe the best debugging tool is a good night's sleep
 - Coffee is my debugging fuel ☕
 
