@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import Hero from "./Hero";
 import About from "./About";
 import Experiences from "./Experiences";
+import Projects from "./Projects";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -15,6 +16,7 @@ const ModernPortfolio = () => {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const experiencesRef = useRef(null);
+  const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
 
@@ -26,6 +28,7 @@ const ModernPortfolio = () => {
         { id: "home", ref: heroRef },
         { id: "about", ref: aboutRef },
         { id: "experiences", ref: experiencesRef },
+        { id: "projects", ref: projectsRef },
         { id: "skills", ref: skillsRef },
         { id: "contact", ref: contactRef },
       ];
@@ -48,6 +51,7 @@ const ModernPortfolio = () => {
       home: heroRef,
       about: aboutRef,
       experiences: experiencesRef,
+      projects: projectsRef,
       skills: skillsRef,
       contact: contactRef,
     };
@@ -65,6 +69,7 @@ const ModernPortfolio = () => {
       <Hero heroRef={heroRef} isLoaded={isLoaded} scrollToSection={scrollToSection} />
       <About aboutRef={aboutRef} />
       <Experiences experiencesRef={experiencesRef} isLoaded={isLoaded} />
+      <Projects projectsRef={projectsRef} isLoaded={isLoaded} />
       <Skills skillsRef={skillsRef} isLoaded={isLoaded} />
       <Contact contactRef={contactRef} />
       <Footer />

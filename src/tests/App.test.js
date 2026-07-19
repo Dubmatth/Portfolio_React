@@ -38,3 +38,10 @@ test('shows error for invalid email format', async () => {
     screen.getByText('Please enter a valid email address.')
   ).toBeInTheDocument();
 });
+
+test('renders the Pomodeep project', () => {
+  render(<App />);
+  expect(screen.getByText('Pomodeep')).toBeInTheDocument();
+  expect(screen.getByText('Closed Beta')).toBeInTheDocument();
+  expect(screen.getByText('Visit pomodeep.app')).toBeInTheDocument();
+});
