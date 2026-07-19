@@ -8,7 +8,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/matthdubois/",
 };
 
-export const navItems = ["home", "about", "experiences", "skills", "contact"];
+export const navItems = ["home", "about", "experiences", "projects", "skills", "contact"];
 
 export const experiences = [
   {
@@ -85,6 +85,19 @@ export const experiences = [
       "Developed the C# backend to handle order processing, validation, and reporting.",
     ],
     technologies: ["React", "SPFx", "C#", "SharePoint"],
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    name: "Pomodeep",
+    tagline: "Finally finish what you start.",
+    description:
+      "A Pomodoro-based productivity app combining a smart timer, task management, focus sounds and statistics — built cross-platform for iOS and Android.",
+    status: "Closed Beta",
+    link: "https://pomodeep.app",
+    technologies: ["React Native", "Expo", "Node.js", "Express", "PostgreSQL", "Prisma"],
   },
 ];
 

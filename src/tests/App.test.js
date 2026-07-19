@@ -10,7 +10,7 @@ test('renders the portfolio with hero name', () => {
 
 test('renders all navigation items', () => {
   render(<App />);
-  ['Home', 'About', 'Experiences', 'Skills', 'Contact'].forEach((item) => {
+  ['Home', 'About', 'Experiences', 'Projects', 'Skills', 'Contact'].forEach((item) => {
     expect(screen.getAllByText(item).length).toBeGreaterThan(0);
   });
 });
