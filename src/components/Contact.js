@@ -139,21 +139,33 @@ const Contact = ({ contactRef }) => {
           </div>
 
           <form onSubmit={handleFormSubmit} className="space-y-6" noValidate>
+            <label htmlFor="contact-name" className="sr-only">
+              Your Name
+            </label>
             <input
+              id="contact-name"
               type="text"
               placeholder="Your Name"
               value={formData.name}
               onChange={updateField("name")}
               className={inputClass}
             />
+            <label htmlFor="contact-email" className="sr-only">
+              Your Email
+            </label>
             <input
+              id="contact-email"
               type="email"
               placeholder="Your Email"
               value={formData.email}
               onChange={updateField("email")}
               className={inputClass}
             />
+            <label htmlFor="contact-message" className="sr-only">
+              Your Message
+            </label>
             <textarea
+              id="contact-message"
               placeholder="Your Message"
               rows={6}
               value={formData.message}
