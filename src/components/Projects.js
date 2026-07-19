@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { projects } from "../data/portfolio";
+// Hardcoded since there's only one project today; move into the data model if a second one is added.
 import pomodeepIcon from "../assets/pomodeep-icon.png";
 
 const Projects = ({ projectsRef, isLoaded }) => {
@@ -17,7 +18,7 @@ const Projects = ({ projectsRef, isLoaded }) => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 ${
+              className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:-translate-y-1 ${
                 isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -39,7 +40,7 @@ const Projects = ({ projectsRef, isLoaded }) => {
                 </div>
               </div>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">{project.description}</p>
 
               <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10 mb-6">
                 {project.technologies.map((tech) => (
