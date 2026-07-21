@@ -114,6 +114,7 @@ export const skillCategories = [
     category: "Backend & Data",
     skills: [
       { name: "C# / .NET 4.8", icon: Zap, color: "from-violet-600 to-purple-500" },
+      { name: ".NET Core", icon: Zap, color: "from-purple-600 to-fuchsia-500" },
       { name: "SQL Server", icon: Zap, color: "from-red-600 to-orange-400" },
     ],
   },
@@ -122,6 +123,7 @@ export const skillCategories = [
     skills: [
       { name: "SharePoint 2013–SE / Cloud", icon: Zap, color: "from-blue-600 to-blue-400" },
       { name: "SPFx", icon: Zap, color: "from-blue-700 to-blue-500" },
+      { name: "Azure DevOps", icon: Palette, color: "from-sky-600 to-blue-500" },
       { name: "SSRS", icon: Palette, color: "from-orange-500 to-red-500" },
     ],
   },
