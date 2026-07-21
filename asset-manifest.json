@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.011f8010.css",
-    "main.js": "/static/js/main.a93c6326.js",
+    "main.js": "/static/js/main.934125b6.js",
     "static/js/453.183908db.chunk.js": "/static/js/453.183908db.chunk.js",
     "static/media/IMG_1974.png": "/static/media/IMG_1974.8a1d74f0358de4b7c5d7.png",
     "static/media/pomodeep-icon.png": "/static/media/pomodeep-icon.7b3a2ae7e505247bd19d.png",
     "index.html": "/index.html",
     "main.011f8010.css.map": "/static/css/main.011f8010.css.map",
-    "main.a93c6326.js.map": "/static/js/main.a93c6326.js.map",
+    "main.934125b6.js.map": "/static/js/main.934125b6.js.map",
     "453.183908db.chunk.js.map": "/static/js/453.183908db.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.011f8010.css",
-    "static/js/main.a93c6326.js"
+    "static/js/main.934125b6.js"
   ]
 }
