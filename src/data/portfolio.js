@@ -13,18 +13,18 @@ export const navItems = ["home", "about", "experiences", "projects", "skills", "
 export const experiences = [
   {
     id: 1,
-    title: "Construction Insurance Subscription Suite",
-    role: "Full-Stack Developer",
+    title: "Full-Stack Developer",
+    role: "Insurance & Surety Subscription Platforms",
     company: "CAMCA",
     period: "2021 – Present",
     context:
-      "Developed multiple subscription forms for construction insurance products within a large insurance group, featuring extensive business and eligibility rules, document generation, and an API serving hundreds of users.",
+      "Own end-to-end delivery and continuous improvement of around a dozen insurance and surety subscription platforms, several of which I originally built at Intermade before joining CAMCA in-house. Led the modernization of the team's frontend, backend and DevOps stack alongside day-to-day development.",
     achievements: [
-      "Built and maintained several insurance subscription forms handling complex, interrelated business and eligibility rule sets.",
-      "Designed and exposed a REST API consumed by hundreds of users across the platform.",
-      "Implemented a 3-level permission system and integrated SSRS for automated document generation and printing.",
+      "Migrated frontend development to SPFx following the SharePoint 2019 upgrade, then carried that through a subsequent migration to SharePoint Subscription Edition (SE), standardizing how new subscription forms are built.",
+      "Led the migration from TFS to Azure DevOps Server and from TFVC to Git, and built CI/CD pipelines covering all projects and environments.",
+      "Drove the backend shift from .NET Framework 4.8 to .NET Core for new projects, while maintaining and improving the existing forms across roughly a dozen active projects.",
     ],
-    technologies: ["jQuery", "Datatables.net", "C#", "SSRS"],
+    technologies: ["SPFx", ".NET Core", "C# / .NET 4.8", "Azure DevOps", "SSRS"],
   },
   {
     id: 2,
