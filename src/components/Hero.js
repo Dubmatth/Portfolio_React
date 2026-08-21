@@ -28,7 +28,7 @@ const Hero = ({ heroRef, isLoaded, scrollToSection }) => {
           Full-Stack Developer · I build things that work · Based in Belgium
         </p>
 
-        <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
           I like building things end-to-end — from the database to the UI.
           Right now I'm working on personal projects and sharpening my skills
           in TypeScript and mobile dev.

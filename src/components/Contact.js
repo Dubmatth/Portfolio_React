@@ -77,7 +77,7 @@ const Contact = ({ contactRef }) => {
   };
 
   const inputClass =
-    "w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-400";
+    "w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-300";
 
   return (
     <section ref={contactRef} className="py-20 relative">
@@ -86,7 +86,7 @@ const Contact = ({ contactRef }) => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Let's connect and share ideas
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Whether it's a project idea, a question, or just saying hi — feel
             free to reach out.
           </p>

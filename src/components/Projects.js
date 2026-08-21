@@ -11,7 +11,7 @@ const Projects = ({ projectsRef, isLoaded }) => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Projects
           </h2>
-          <p className="text-gray-400 text-lg">What I'm building right now</p>
+          <p className="text-gray-300 text-lg">What I'm building right now</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">

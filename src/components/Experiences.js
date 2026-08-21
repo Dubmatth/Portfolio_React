@@ -29,7 +29,7 @@ const Experiences = ({ experiencesRef, isLoaded }) => {
                     {exp.company && ` · ${exp.company}`}
                   </p>
                 </div>
-                <span className="text-sm text-gray-400 mt-2 md:mt-0 md:ml-4 shrink-0">
+                <span className="text-sm text-gray-300 mt-2 md:mt-0 md:ml-4 shrink-0">
                   {exp.period}
                 </span>
               </div>
@@ -39,7 +39,7 @@ const Experiences = ({ experiencesRef, isLoaded }) => {
               </p>
 
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-3">
                   Key achievements
                 </h4>
                 <ul className="space-y-2">
