@@ -335,7 +335,7 @@ const ModernPortfolio = () => {
             Full-Stack Developer · I build things that work · Based in Belgium
           </p>
 
-          <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             I like building things end-to-end — from the database to the UI.
             Right now I'm working on personal projects and sharpening my skills
             in TypeScript and mobile dev.
@@ -505,7 +505,7 @@ const ModernPortfolio = () => {
                   <h3 className="text-xl font-bold mb-2 text-white group-hover:text-purple-300 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 mb-4 line-clamp-2">
+                  <p className="text-gray-300 mb-4 line-clamp-2">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -532,7 +532,7 @@ const ModernPortfolio = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Skills & Expertise
             </h2>
-            <p className="text-gray-400 text-lg">Technologies I work with</p>
+            <p className="text-gray-300 text-lg">Technologies I work with</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -564,7 +564,7 @@ const ModernPortfolio = () => {
                         style={{ width: isLoaded ? `${skill.level}%` : "0%" }}
                       />
                     </div>
-                    <span className="text-sm text-gray-400 mt-2 block">
+                    <span className="text-sm text-gray-300 mt-2 block">
                       {skill.level}%
                     </span>
                   </div>
@@ -582,7 +582,7 @@ const ModernPortfolio = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Let's connect and share ideas
             </h2>
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-300 text-lg">
               Whether it's a project idea, a question, or just saying hi — feel
               free to reach out.
             </p>
@@ -636,7 +636,7 @@ const ModernPortfolio = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-400"
+                  className="w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-300"
                 />
               </div>
               <div>
@@ -647,7 +647,7 @@ const ModernPortfolio = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-400"
+                  className="w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-300"
                 />
               </div>
               <div>
@@ -658,7 +658,7 @@ const ModernPortfolio = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-400 resize-none"
+                  className="w-full p-4 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm focus:border-purple-400 focus:outline-none transition-colors text-white placeholder-gray-300 resize-none"
                 />
               </div>
               {submitStatus && (
@@ -687,7 +687,7 @@ const ModernPortfolio = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-gray-400">
+          <p className="text-gray-300">
             © 2026 Matthieu Dubois. Built with ❤️, React & Tailwind CSS.
           </p>
         </div>
